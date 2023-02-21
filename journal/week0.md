@@ -14,4 +14,10 @@
 
 [Lucidchart Share Link to the Logical Diagram](https://lucid.app/lucidchart/9c63bfbc-1ad6-4c75-86af-e252fc3b4e78/edit?viewport_loc=-1163%2C179%2C3552%2C1746%2C0_0&invitationId=inv_3c22fbce-954d-437e-a389-53906eeed9d4)
 
+### Create an Admin user
+
+We were able without any issue to create an Admin IAM user.
+
+![Create an admin IAM user](assets/week0-create-an-admin-user.png)
+
 ## Homework Challenges
