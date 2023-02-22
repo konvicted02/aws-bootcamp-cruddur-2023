@@ -20,4 +20,51 @@ We were able without any issue to create an Admin IAM user.
 
 ![Create an admin IAM user](assets/week0-create-an-admin-user.png)
 
+### Install AWS CLI
+
+####  1. Into gitpod
+
+To install AWS CLI into gitpod, in the "workspace" folder, we followed these [AWS CLI install and update instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for Linux systems:
+
+  a. Download the installation file
+
+  ```sh
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  ```
+
+  b. Unzip the installer
+  
+  ```sh
+  unzip awscliv2.zip
+  ```
+  
+  c. Run the install program
+  
+  ```sh
+  sudo ./aws/install
+  ```
+  
+Then to install the AWS CLI when our Gitpod enviroment launches, we updated our `.gitpod.yml` to include the following tasks:
+
+```sh
+tasks:
+  - name: aws-cli
+    env:
+      AWS_CLI_AUTO_PROMPT: on-partial
+    init: |
+      cd /workspace
+      curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+      unzip awscliv2.zip
+      sudo ./aws/install
+      cd $THEIA_WORKSPACE_ROOT
+```
+
+![Proof of AWS CLI Install into Gitpod](assets/week0-install-aws-cli-into-gitpod.png)
+
+####  2. On macOS
+
+We also tried to install the AWS CLI on macOS by following the [AWS CLI install and update instructions](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) for macOS systems. See below a screenshot as proof.
+
+![Proof of AWS CLI Install on macOS](assets/week0-install-aws-cli-on-mac.png)
+
 ## Homework Challenges
