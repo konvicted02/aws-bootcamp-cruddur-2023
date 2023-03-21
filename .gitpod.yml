@@ -18,3 +18,9 @@ vscode:
   extensions:
     - 42Crunch.vscode-openapi
     - cweijan.vscode-postgresql-client2
+    - adpyke.codesnap
+    - aaron-bond.better-comments
+    - TabNine.tabnine-vscode
+    - donjayamanne.githistory
+    - esbenp.prettier-vscode
+    - formulahendry.auto-rename-tag
