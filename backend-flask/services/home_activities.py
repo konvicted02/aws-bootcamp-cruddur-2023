@@ -1,4 +1,5 @@
 from datetime import datetime, timedelta, timezone
+import jsonpickle
 class HomeActivities:
   def run():
     now = datetime.now(timezone.utc).astimezone()
@@ -41,4 +42,4 @@ class HomeActivities:
       'replies': []
     }
     ]
-    return results
+    return jsonpickle.encode(results)
