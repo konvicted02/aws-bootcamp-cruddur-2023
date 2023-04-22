@@ -4,11 +4,11 @@ from aws_xray_sdk.core import xray_recorder
 class NotificationsActivities:
   def run():
     #X-RAY ---------------------------------------------------------
-    segment = xray_recorder.begin_segment('NotificationsActivities')
+    #segment = xray_recorder.begin_segment('NotificationsActivities')
 
     now = datetime.now(timezone.utc).astimezone
     #start a segment
-    segment = xray_recorder.begin_segment('NotificationsActivities')
+    #segment = xray_recorder.begin_segment('NotificationsActivities')
 
     now = datetime.now(timezone.utc).astimezone()
 
@@ -34,16 +34,16 @@ class NotificationsActivities:
     }
     ]
     #X-RAY ---------------------------------------------------------
-    subsegment = xray_recorder.begin_subsegment('NotificationsActivities-mock-data')
-    dict = {
-      "uuid": '68f126b0-1ceb-4a33-88be-d90fa7109eee',
-      "handle":  'Pepe',
-      "message": 'I am a black unicorn',
-      "created_at": (now - timedelta(days=2)).isoformat(),
-      "expires_at": (now + timedelta(days=5)).isoformat(),
-    }
+    #subsegment = xray_recorder.begin_subsegment('NotificationsActivities-mock-data')
+    #dict = {
+    #  "uuid": '68f126b0-1ceb-4a33-88be-d90fa7109eee',
+    #  "handle":  'Pepe',
+    #  "message": 'I am a black unicorn',
+    #  "created_at": (now - timedelta(days=2)).isoformat(),
+    #  "expires_at": (now + timedelta(days=5)).isoformat(),
+    #}
     # Add the metadata to the segment
-    subsegment.put_metadata('key', dict, 'namespace')
+    #subsegment.put_metadata('key', dict, 'namespace')
 
     #xray_recorder.end_subsegment()
     # Close the segment
