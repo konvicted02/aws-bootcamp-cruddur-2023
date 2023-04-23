@@ -61,7 +61,7 @@ tracer = trace.get_tracer(__name__)
 app = Flask(__name__)
 
 # X-Ray -----------------------------
-XRayMiddleware(app, xray_recorder)
+# XRayMiddleware(app, xray_recorder)
 
 # Honeycomb
 # Initialize automatic instrumentation with Flask
@@ -127,7 +127,7 @@ def data_home():
   return data, 200
 
 @app.route("/api/activities/notifications", methods=['GET'])
-@xray_recorder.capture('notifications_activities')
+# @xray_recorder.capture('notifications_activities')
 def data_notifications():
   data = NotificationsActivities.run()
   return data, 200
